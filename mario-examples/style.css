@@ -43,8 +43,9 @@ html, body{
 
 .mario {
     position: absolute;
-    top: -40px;
+    top: -90px;
     left: 0;
+    transform: scale(.25);
     animation-name: drive;
     animation-duration: 3s;
 /*    makes mario start at 200 and stay at the end*/
@@ -52,7 +53,18 @@ html, body{
 /*    mario goes around forever*/
     animation-iteration-count: infinite;
 }
-
+.luigi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(.85);
+    transform: rotatey(180deg);
+    animation-name: drive;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
 /*// KEYFRAMES //*/
 @keyframes drive{
     from{ transform: translateX(-100px)}
