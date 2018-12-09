@@ -47,12 +47,16 @@ html, body{
     left: 0;
     animation-name: drive;
     animation-duration: 3s;
+/*    makes mario start at 200 and stay at the end*/
+    animation-fill-mode: both;
+/*    mario goes around forever*/
+    animation-iteration-count: infinite;
 }
 
 /*// KEYFRAMES //*/
 @keyframes drive{
-    from{ transform: translateX(0)}
-    to{ transform: translateX(1500px)}
+    from{ transform: translateX(-100px)}
+    to{ transform: translateX(1400px)}
 }
 
 
