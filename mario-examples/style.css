@@ -45,25 +45,29 @@ html, body{
     position: absolute;
     top: -90px;
     left: 0;
-    transform: scale(.25);
     animation-name: drive;
     animation-duration: 3s;
 /*    makes mario start at 200 and stay at the end*/
     animation-fill-mode: both;
 /*    mario goes around forever*/
     animation-iteration-count: infinite;
+/*    animation timing function default is ease*/
+/*    right click and do quick edit*/
+    animation-timing-function: cubic-bezier(1, -0.39, .47, 1.11);
 }
 .luigi {
     position: absolute;
     top: 0;
     left: 0;
-    transform: scale(.85);
+/*    why doesn't this work?*/
     transform: rotatey(180deg);
     animation-name: drive;
     animation-duration: 5s;
     animation-fill-mode: both;
     animation-direction: reverse;
     animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.04, 1.17, .11, .97);
+
 }
 /*// KEYFRAMES //*/
 @keyframes drive{
