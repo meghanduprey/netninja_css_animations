@@ -43,9 +43,12 @@ html, body{
 
 .mario {
     position: absolute;
-    top: -90px;
+    top: -40px;
     left: 0;
-    animation-name: drive;
+    animation: drive, jump;
+/*    don't like this one, only jumped one time*/
+/*    animation: drive 3s both infinite linear, */
+/*        jump 0.3s 1.2s ease;*/
     animation-duration: 3s;
 /*    makes mario start at 200 and stay at the end*/
     animation-fill-mode: both;
@@ -58,7 +61,7 @@ html, body{
 }
 .luigi {
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
 /*    why doesn't this work?*/
     transform: rotatey(180deg);
@@ -135,5 +138,9 @@ html, body{
 }
 
 
-
+@keyframes jump {
+    0% { top: -40px}
+    50% { top: -180px}
+    90% { top: -40px}
+}
 
