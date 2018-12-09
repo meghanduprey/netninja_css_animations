@@ -53,7 +53,8 @@ html, body{
     animation-iteration-count: infinite;
 /*    animation timing function default is ease*/
 /*    right click and do quick edit*/
-    animation-timing-function: cubic-bezier(1, -0.39, .47, 1.11);
+/*    animation-timing-function: cubic-bezier(1, -0.39, .47, 1.11);*/
+    animation-timing-function: linear;
 }
 .luigi {
     position: absolute;
@@ -64,10 +65,63 @@ html, body{
     animation-name: drive;
     animation-duration: 5s;
     animation-fill-mode: both;
-    animation-direction: reverse;
+/*    animation-direction: reverse;*/
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.04, 1.17, .11, .97);
-
+/*    animation-timing-function: cubic-bezier(.04, 1.17, .11, .97);*/
+    animation-timing-function: linear;
+}
+.cloud {
+    position: absolute;   
+}
+.cloud:nth-child(1) {
+    width: 240px;
+    height: 200px;
+    top: 120px;
+    opacity: 0.5;
+/*    name, how long it takes, linear or ease, loop, direction*/
+    animation: wind 140s linear infinite reverse;
+}
+.cloud:nth-child(2) {
+    width: 300px;
+    top: 0;
+    animation: wind 120s linear infinite reverse;
+}
+.cloud:nth-child(3) {
+    width: 200px;
+    top: 60px;
+    opacity: 0.8;
+/*    name, how long it takes, linear or ease, loop, direction*/
+    animation: wind 180s linear infinite;
+}
+.cloud:nth-child(4) {
+    width: 200px;
+    height: 300px;
+    top: 10px;
+    opacity: 0.3;
+/*    name, how long it takes, linear or ease, loop, direction*/
+    animation: wind 150s linear infinite;
+}
+.cloud:nth-child(5) {
+    width: 400px;
+    height: 300px;
+    top: 10px;
+    opacity: 0.8;
+/*    name, how long it takes, linear or ease, loop, direction*/
+    animation: wind 150s linear infinite;
+}
+.cloud:nth-child(7) {
+    width: 800px;
+    top: 10px;
+    opacity: 0.9;
+/*    name, how long it takes, linear or ease, loop, direction*/
+    animation: wind 150s linear infinite;
+}
+.cloud:nth-child(7) {
+    width: 120px;
+    top: 10px;
+    opacity: 0.2;
+/*    name, how long it takes, linear or ease, loop, direction*/
+    animation: wind 150s linear infinite;
 }
 /*// KEYFRAMES //*/
 @keyframes drive{
@@ -75,7 +129,10 @@ html, body{
     to{ transform: translateX(1400px)}
 }
 
-
+@keyframes wind {
+    from{ left: -200px}
+    to{ left: 100%}
+}
 
 
 
